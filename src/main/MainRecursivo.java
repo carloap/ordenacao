@@ -1,4 +1,4 @@
-package br.com.main;
+package main;
 
 public class MainRecursivo {
 
