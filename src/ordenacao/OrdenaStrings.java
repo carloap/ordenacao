@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import util.Converter;
+
 public class OrdenaStrings {
 
 	
@@ -13,12 +15,13 @@ public class OrdenaStrings {
 	 * @return
 	 */
 	public static String[] ordenaLista(String[] sArray) {
-		List<String> lista = new ArrayList<String>();
-		for (String string : sArray) {
-			lista.add(string);
-		}
+		Converter<String> converte = new Converter<String>();
+		List<String> lista = converte.deUmaArray(sArray); 
 		
 		Collections.sort(lista, String.CASE_INSENSITIVE_ORDER);
+		
+		
+		
 		
 		// Transforma a lista em uma array de Strings e retorna
 		String[] result = new String[lista.size()];
@@ -46,7 +49,7 @@ public class OrdenaStrings {
 	}
 	
 	/**
-	 * Compara a diferença entre duas strings, se uma for maior que a outra, ou se forem nulas
+	 * Compara a diferença entre duas strings, ou se uma delas for nula.
 	 * @param str1
 	 * @param str2
 	 * @return
