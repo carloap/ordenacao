@@ -8,7 +8,6 @@ import util.Converter;
 
 public class OrdenaStrings {
 
-	
 	/**
 	 * Ordena uma lista de Strings utilizando um Comparator<>
 	 * @param sArray
@@ -20,15 +19,10 @@ public class OrdenaStrings {
 		
 		Collections.sort(lista, String.CASE_INSENSITIVE_ORDER);
 		
-		
-		
-		
 		// Transforma a lista em uma array de Strings e retorna
 		String[] result = new String[lista.size()];
 		return lista.toArray(result);
 	}
-	
-	
 	
 	/**
 	 * Utiliza algoritmo de ordenação bubbleSort

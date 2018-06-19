@@ -8,8 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Instancia um novo objeto de Converter&lt;T&gt; com um tipo (classe ou interface) genérico.
- * @author cpereira
+ * Instancia um novo objeto Converter<T> com um tipo (classe ou interface) genérico.
+ * @author carloap
  * @param <T>
  */
 public class Converter<T> {
@@ -21,11 +21,8 @@ public class Converter<T> {
 	/**
 	 * Construtor
 	 */
-	public Converter() {
-	}
+	public Converter() {}
 
-	
-	
 	
 	/**
 	 * Cria uma lista com tamanho fixo a partir de uma array.
@@ -53,12 +50,13 @@ public class Converter<T> {
 	
 	
 	/**
-	 * Transforma uma Lista gerérica em uma array genérica, a partir do reflection do tipo genérico especificado.<br><br>
-	 * <b>Exemplo:</b> <br>
-	 * Se for instanciado esta classe como Converter&lt;String&gt;, <br>
-	 * então esse método criará uma instância imutável desse &lt;String&gt; com o tamanho da Lista. <br>
-	 * <br>
-	 * <b>Logo:</b> Array.newInstance(INSTÂNCIA, TAMANHO DA LISTA);
+	 * Transforma uma Lista gerérica em uma array genérica, a partir do reflection do tipo genérico especificado.
+	 * Exemplo:
+	 *     Se for instanciado esta classe como Converter<String>
+	 *     então esse método criará uma instância imutável desse <String> com o tamanho da Lista.
+	 * 
+	 * Logo:
+	 *     Array.newInstance(INSTÂNCIA, TAMANHO DA LISTA);
 	 * 
 	 * @param list
 	 * @return
@@ -70,9 +68,6 @@ public class Converter<T> {
 		final T[] result = (T[]) Array.newInstance(instance.getClass(), list.size());
 		return list.toArray(result);
 	}
-	
-	
-	
 	
 	
 }
