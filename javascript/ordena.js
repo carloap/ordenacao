@@ -7,10 +7,16 @@ function bubbleSort(arr)
     {
         for(b=a+1; b<a_s; b++)
         {
-            var aux=arr[a];
-            arr[a]=arr[b];
-            arr[b]=aux;
+            if(arr[a]>arr[b])
+            {
+                var aux=arr[a];
+                arr[a]=arr[b];
+                arr[b]=aux;
+            }
         }
     }
     return arr;
 }
+
+var array_teste = ['5','0','6','9','1','3','4','7','8','2'];
+bubbleSort(array_teste);

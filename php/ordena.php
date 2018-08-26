@@ -15,9 +15,12 @@ class Ordena
         {
             for($y=$k+1; $y<$k_s; $y++)
             {
-                $aux = $array[$k];
-                $array[$k] = $array[$y];
-                $array[$y] = $aux;
+                if($array[k]>$array[y])
+                {
+                    $aux = $array[$k];
+                    $array[$k] = $array[$y];
+                    $array[$y] = $aux;
+                }
             }
         }
         return $array;
